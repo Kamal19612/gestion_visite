@@ -2,8 +2,11 @@ package com.EDefence.GestionVisite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
+@SpringBootApplication(
+		exclude = {
+				org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration.class
+		}
+)
 public class GestionVisiteApplication {
 
 	public static void main(String[] args) {
